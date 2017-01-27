@@ -665,6 +665,10 @@ public class OozieJobExecutorJobEntryTest {
       return null;
     }
 
+    @Override public String getAcl() {
+      return null;
+    }
+
     @Override
     public int getRun() {
       return 0;
@@ -682,6 +686,10 @@ public class OozieJobExecutorJobEntryTest {
 
     @Override
     public List<WorkflowAction> getActions() {
+      return null;
+    }
+
+    @Override public String getExternalId() {
       return null;
     }
   }
