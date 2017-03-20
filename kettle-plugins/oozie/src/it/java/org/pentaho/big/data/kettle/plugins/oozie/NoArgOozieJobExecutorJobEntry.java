@@ -114,7 +114,8 @@ public class NoArgOozieJobExecutorJobEntry extends OozieJobExecutorJobEntry {
     }
 
     private class TestOozieShim implements PentahoHadoopShim {
-      @Override public ShimVersion getVersion() {
+      @Override
+      public ShimVersion getVersion() {
         return null;
       }
     }
@@ -122,7 +123,8 @@ public class NoArgOozieJobExecutorJobEntry extends OozieJobExecutorJobEntry {
 
   public static class NoArgOozieClientFactory implements OozieClientFactory {
 
-    @Override public org.pentaho.oozie.shim.api.OozieClient create( String s ) {
+    @Override
+    public org.pentaho.oozie.shim.api.OozieClient create( String s ) {
       return new OozieClientImpl( OozieJobExecutorJobEntryIT.oozieClient ) {
         @Override
         public OozieJob run( Properties props ) throws OozieClientException {
@@ -152,7 +154,8 @@ public class NoArgOozieJobExecutorJobEntry extends OozieJobExecutorJobEntry {
       };
     }
 
-    @Override public ShimVersion getVersion() {
+    @Override
+    public ShimVersion getVersion() {
       return new ShimVersion( 0, 0 );
     }
   }
